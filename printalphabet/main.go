@@ -31,3 +31,13 @@ func main() {
 	z01.PrintRune('z')
 	z01.PrintRune('\n')
 }
+
+/*
+Loop version:
+
+for i := 'a'; i <= 'z'; i++ {
+	z01.PrintRune(i)
+}
+
+z01.PrintRune('\n')
+*/
