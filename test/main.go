@@ -1,7 +1,12 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+
+	"piscine"
+)
 
 func main() {
-	piscine.PrintComb2()
+	arg := 4
+	fmt.Println(piscine.IterativeFactorial(arg))
 }
