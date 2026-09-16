@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	name := filepath.Base(os.Arg[0])
+	name := filepath.Base(os.Args[0])
 	fmt.Println(name)
 }
