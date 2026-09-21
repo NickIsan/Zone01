@@ -15,12 +15,12 @@ func main() {
 		file, err := os.Open(os.Args[i])
 		if err != nil {
 			os.Stderr.Write([]byte("ERROR: " + err.Error() + "\n"))
+			os.Exit(1)
+			// if len(os.Args) == 2 {
+			// 	os.Exit(1)
+			// }
 
-			if len(os.Args) == 2 {
-				os.Exit(1)
-			}
-
-			return
+			// return
 		}
 
 		io.Copy(os.Stdout, file)
