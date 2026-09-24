@@ -12,10 +12,7 @@ func ShoppingSummaryCounter(str string) map[string]int {
 			word += string(r)
 		}
 	}
-
-	if word != "" {
-		summary[word]++
-	}
+	summary[word]++
 
 	return summary
 }
