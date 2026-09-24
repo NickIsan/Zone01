@@ -4,7 +4,7 @@ import "github.com/01-edu/z01"
 
 func DescendComb() {
 	for first := 99; first >= 0; first-- {
-		for second := 98; second >= 0; second-- {
+		for second := first - 1; second >= 0; second-- {
 
 			tens := first / 10
 			ones := first % 10
