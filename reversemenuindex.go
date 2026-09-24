@@ -10,11 +10,11 @@ func ReverseMenuIndex(menu []string) []string {
 
 	for left < right {
 
-		menu[left], menu[right] = menu[right], menu[left]
+		result[left], result[right] = result[right], result[left]
 
 		left++
 		right--
 	}
 
-	return menu
+	return result
 }
