@@ -2,8 +2,9 @@ package piscine
 
 func StringToIntSlice(str string) []int {
 	numbers := make([]int, len(str))
-	for i, letter := range str {
-		numbers[i] = int(letter)
+	for _, letter := range str {
+		numbers = append(numbers, int(letter))
+		// numbers[i] = int(letter)
 	}
 	return numbers
 }
