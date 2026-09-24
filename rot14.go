@@ -4,7 +4,7 @@ func Rot14(s string) string {
 	result := ""
 
 	for _, char := range s {
-		if char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z' {
+		if char >= 'a' && char <= 'z' {
 			char += 14
 			if char > 'z' {
 				char -= 26
