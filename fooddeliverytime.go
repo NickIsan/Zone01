@@ -20,3 +20,8 @@ func FoodDeliveryTime(order string) int {
 		return 404
 	}
 }
+
+/* same as
+if order == burger {
+return burger.time}
+*/
