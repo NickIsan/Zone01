@@ -1,9 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
 func atoi(s string) (int64, bool) {
@@ -38,12 +37,12 @@ func atoi(s string) (int64, bool) {
 
 func printNumber(n int64) {
 	if n == 0 {
-		z01.PrintRune('0')
+		fmt.Println('0')
 		return
 	}
 
 	if n < 0 {
-		z01.PrintRune('-')
+		fmt.Println('-')
 		n = -n
 	}
 
@@ -58,13 +57,13 @@ func printNumber(n int64) {
 
 	for i > 0 {
 		i--
-		z01.PrintRune(rune(digits[i] + '0'))
+		fmt.Println(rune(digits[i] + '0'))
 	}
 }
 
 func printString(s string) {
 	for _, r := range s {
-		z01.PrintRune(r)
+		fmt.Println(r)
 	}
 }
 
