@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -35,38 +34,6 @@ func atoi(s string) (int64, bool) {
 	return n * sign, true
 }
 
-func printNumber(n int64) {
-	if n == 0 {
-		fmt.Println('0')
-		return
-	}
-
-	if n < 0 {
-		fmt.Println('-')
-		n = -n
-	}
-
-	var digits [20]int
-	i := 0
-
-	for n > 0 {
-		digits[i] = int(n % 10)
-		n = n / 10
-		i++
-	}
-
-	for i > 0 {
-		i--
-		fmt.Println(rune(digits[i] + '0'))
-	}
-}
-
-func printString(s string) {
-	for _, r := range s {
-		fmt.Println(r)
-	}
-}
-
 func main() {
 	if len(os.Args) != 4 {
 		return
@@ -84,27 +51,27 @@ func main() {
 
 	switch os.Args[2] {
 	case "+":
-		printNumber(a + b)
+		print(a + b)
 
 	case "-":
-		printNumber(a - b)
+		print(a - b)
 
 	case "*":
-		printNumber(a * b)
+		print(a * b)
 
 	case "/":
 		if b == 0 {
-			printString("No division by 0\n")
+			print("No division by 0\n")
 			return
 		}
-		printNumber(a / b)
+		print(a / b)
 
 	case "%":
 		if b == 0 {
-			printString("No modulo by 0\n")
+			print("No modulo by 0\n")
 			return
 		}
-		printNumber(a % b)
+		print(a % b)
 
 	default:
 		return
