@@ -108,4 +108,6 @@ func main() {
 	default:
 		return
 	}
+
+	os.Stdout.Write([]byte{'\n'})
 }
