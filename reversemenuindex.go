@@ -1,8 +1,8 @@
 package piscine
 
 func ReverseMenuIndex(menu []string) []string {
-	result := make([]string, 4)
-	for i := 0; i < 4; i++ {
+	result := make([]string, len(menu))
+	for i := 0; i < len(menu); i++ {
 		result[i] = menu[i]
 	}
 	left := 0
