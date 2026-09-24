@@ -10,6 +10,7 @@ func Compact(ptr *[]string) int {
 		}
 	}
 
+	// it makes the slice smaller
 	*ptr = (*ptr)[:count]
 
 	return count
