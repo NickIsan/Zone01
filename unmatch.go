@@ -10,6 +10,10 @@ func Unmatch(a []int) int {
 			}
 		}
 
+		if count%2 != 0 {
+			return a[i]
+		}
+
 		if count == 1 {
 			return a[i]
 		}
