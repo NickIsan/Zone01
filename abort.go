@@ -13,3 +13,26 @@ func Abort(a, b, c, d, e int) int {
 
 	return n[2]
 }
+
+/*  for pass := 0; pass < 4; pass++ {
+        for i := 0; i < 4; i++ {
+            if n[i] > n[i+1] {
+                n[i], n[i+1] = n[i+1], n[i]
+            }
+        }
+    }
+
+
+
+
+	for swapped {
+    swapped = false
+
+    for i := 0; i < len(n)-1; i++ {
+        if n[i] > n[i+1] {
+            n[i], n[i+1] = n[i+1], n[i]
+            swapped = true
+        }
+    }
+}
+*/
