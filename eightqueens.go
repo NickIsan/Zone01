@@ -1,57 +1,57 @@
-package piscine
+// package piscine
 
-import "github.com/01-edu/z01"
+// import "github.com/01-edu/z01"
 
-// help function
-func absolute(n int) int {
-	if n < 0 {
-		return -n
-	}
-	return n
-}
+// // help function
+// func absolute(n int) int {
+// 	if n < 0 {
+// 		return -n
+// 	}
+// 	return n
+// }
 
-positions := make([]int, 8)
+// positions := make([]int, 8)
 
-func isSafe(positions []int, column int, row int) bool {
-	for i := 0; i < column; i++ {
-		if positions[i] == row {
-		return false
-		}
+// func isSafe(positions []int, column int, row int) bool {
+// 	for i := 0; i < column; i++ {
+// 		if positions[i] == row {
+// 		return false
+// 		}
 	
-		if abs(positions[i]-row) == column-i {
-			return false
-		}
+// 		if abs(positions[i]-row) == column-i {
+// 			return false
+// 		}
 	
-	}
+// 	}
 
-	return true
-}
+// 	return true
+// }
 
-func printSolution(positions {}int) {
-	for i := 0; i < 8; i++ {
-		z01.PrintRune(rune(positions[i] + '0'))
-	}
-	z01.PrintRune('\n')
-}
+// func printSolution(positions {}int) {
+// 	for i := 0; i < 8; i++ {
+// 		z01.PrintRune(rune(positions[i] + '0'))
+// 	}
+// 	z01.PrintRune('\n')
+// }
 
-func solveQueens(positions []int, column int) {
-	if column == 8 {
-		printSolution(positions)
-		return
-	}
+// func solveQueens(positions []int, column int) {
+// 	if column == 8 {
+// 		printSolution(positions)
+// 		return
+// 	}
 
-	for row := 1; row <= 8; row++ {
-		if isSafe(positions, column, row) {
-			positions[column] = row
-			sollveQueens(positions, column+1)
-		}
-	}
-}	
+// 	for row := 1; row <= 8; row++ {
+// 		if isSafe(positions, column, row) {
+// 			positions[column] = row
+// 			sollveQueens(positions, column+1)
+// 		}
+// 	}
+// }	
 
-func EightQueens() {
-	positions := make([]int, 8)
-	solveQueens(positions, 0)
-}
+// func EightQueens() {
+// 	positions := make([]int, 8)
+// 	solveQueens(positions, 0)
+// }
 
 
 
